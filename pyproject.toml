@@ -5,11 +5,11 @@ build-backend = "hatchling.build"
 [project]
 name = "gengine"
 dynamic = ["version"]
-description = 'Engine for piping generators'
+description = "Engine for piping generators"
 readme = "README.md"
 requires-python = ">=3.8"
 license = "MIT"
-keywords = []
+keywords = ["generator", "pipeline", "workflow", "engine", "stream", "data"]
 authors = [
   { name = "m-birke", email = "wesci@web.de" },
 ]
