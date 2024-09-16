@@ -34,7 +34,11 @@ Source = "https://github.com/m-birke/gengine"
 [tool.hatch.version]
 path = "src/gengine/__about__.py"
 
+[tool.hatch.envs.default]
+path = "./.hatch/default"
+
 [tool.hatch.envs.types]
+path = "./.hatch/types"
 extra-dependencies = [
   "mypy>=1.0.0",
 ]
