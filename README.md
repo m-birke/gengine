@@ -1,9 +1,20 @@
 # gengine
 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/m-birke/gengine/static-code-check.yml)
 [![PyPI - Version](https://img.shields.io/pypi/v/gengine.svg)](https://pypi.org/project/gengine)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/gengine.svg)](https://pypi.org/project/gengine)
+![GitHub License](https://img.shields.io/github/license/m-birke/gengine)
+![PyPI - Status](https://img.shields.io/pypi/status/gengine)
+![PyPI - Format](https://img.shields.io/pypi/format/gengine)
+![PyPI - Types](https://img.shields.io/pypi/types/gengine)
+![PyPI - Implementation](https://img.shields.io/pypi/implementation/gengine)
+[![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Linting: Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 -----
+
+Engine for piping generators
 
 ## Table of Contents
 
