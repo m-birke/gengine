@@ -139,6 +139,12 @@ ban-relative-imports = "all"
 # Tests can use magic values, assertions, and relative imports
 "tests/**/*" = ["PLR2004", "S101", "TID252"]
 
+#[[tool.mypy.overrides]]
+#module = [
+#]
+#follow_untyped_imports = true
+#ignore_missing_imports = true
+
 [tool.coverage.run]
 source_pkgs = ["gengine", "tests"]
 branch = true
