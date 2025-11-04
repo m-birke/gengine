@@ -7,11 +7,7 @@ name = "gengine"
 dynamic = ["version"]
 description = "Engine for piping generators"
 readme = "README.md"
-<<<<<<< before updating
 requires-python = ">=3.8"
-=======
-requires-python = ">=3.10"
->>>>>>> after updating
 license = "MIT"
 license-files = ["LICENSE"]
 keywords = [
