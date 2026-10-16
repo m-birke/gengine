@@ -40,22 +40,27 @@ Each callable must accept exactly one parameter.
 ```python
 from gengine import GenGine
 
+
 def my_gen(_inp):
     for j in range(10):
         yield j
 
+
 def my_add(inp):
-    return inp+2
+    return inp + 2
+
 
 def my_mul(inp):
     for i in range(3):
-        yield inp*i
+        yield inp * i
+
 
 def my_filter(inp):
-    if inp%2 == 0:
+    if inp % 2 == 0:
         return None
     else:
         return inp
+
 
 g = GenGine([my_gen, my_add, my_mul, my_filter])
 
