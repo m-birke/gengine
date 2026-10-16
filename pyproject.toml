@@ -32,11 +32,13 @@ classifiers = [
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
   "Programming Language :: Python :: Implementation :: CPython",
   "Operating System :: Microsoft :: Windows",
   "Operating System :: POSIX :: Linux",
 ]
-dependencies = []
+dependencies = [
+]
 
 [project.urls]
 Changelog = "https://github.com/m-birke/gengine/blob/main/CHANGELOG.md"
@@ -51,9 +53,10 @@ build.targets.wheel.packages = ["src/gengine/"]
 
 [tool.hatch.version]
 source = "vcs"
-raw-options = {version_scheme = "guess-next-dev"}
+raw-options = {version_scheme = "only-version", local_scheme = "no-local-version"}
 
 [tool.hatch.envs.default]
+installer = "uv"
 path = "./.hatch/default"
 dependencies = [
   "coverage[toml]>=6.5",
@@ -72,9 +75,10 @@ cov = [
 ]
 
 [[tool.hatch.envs.all.matrix]]
-python = ["3.9", "3.10", "3.11", "3.12", "3.13"]
+python = ["3.10", "3.11", "3.12", "3.13", "3.14"]
 
 [tool.hatch.envs.types]
+installer = "uv"
 path = "./.hatch/types"
 extra-dependencies = [
   "mypy>=1.0.0",
@@ -139,11 +143,10 @@ ban-relative-imports = "all"
 # Tests can use magic values, assertions, and relative imports
 "tests/**/*" = ["PLR2004", "S101", "TID252"]
 
-#[[tool.mypy.overrides]]
-#module = [
-#]
-#follow_untyped_imports = true
-#ignore_missing_imports = true
+[tool.mypy]
+check_untyped_defs = true
+follow_untyped_imports = true
+ignore_missing_imports = true
 
 [tool.coverage.run]
 source_pkgs = ["gengine", "tests"]
